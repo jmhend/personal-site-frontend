@@ -1,8 +1,8 @@
 import { About } from '../components/About'
 
-function Home() {
+function AboutPage() {
   return <About />
 }
 
-export default Home
+export default AboutPage
 
