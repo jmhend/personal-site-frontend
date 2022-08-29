@@ -10,7 +10,7 @@ export const PostView: FunctionComponent<PostViewProps> = ( { post } : PostViewP
     const md = new MarkdownIt();
     const htmlBody = md.render(post.body);
     return (
-        <div className="post-view ph pt-8 pb-8">
+        <div className="post-view page-container pt-8 pb-8">
             <h1 className="page-title mb-2">{post.title}</h1>
             <h2 className="text-[#726F6C] text-sm mb-8">{post.formatDateAndMinutes()}</h2>
             <section dangerouslySetInnerHTML={{__html: htmlBody}}></section>

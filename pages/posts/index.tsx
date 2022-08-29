@@ -8,7 +8,7 @@ function PostsPage( { posts }: InferGetStaticPropsType<typeof getStaticProps>) {
     return Post.fromJSON(element);
   });
   return (
-    <div className="ph">
+    <div className="page-container">
       <h1 className="page-title mt-8 mb-4">Posts</h1>
       <PostPreviewList posts = {postsArray} />
     </div>

@@ -5,9 +5,9 @@ import Link from "next/link"
 export const About: FunctionComponent = () => {
     return (
         <>
-            <div className="flex flex-col pl-[25%] pr-[25%]">
+            <div className="flex flex-col container mx-auto max-w-[777px] px-4">
                 <div className="flex flex-col items-center mt-8 md:flex-row" >
-                    <div className="min-w-[200px] min-w-[200px] mr-8">
+                    <div className="min-w-[200px] min-w-[200px] md:mr-8">
                     <Image
                         objectFit="cover"
                         src="https://res.cloudinary.com/dfs6gdqqd/image/upload/v1661604404/about_me_cnpfwe.jpg"

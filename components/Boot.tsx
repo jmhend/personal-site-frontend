@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export const Boot: FunctionComponent = () => {
     return (
-        <div className="ph">
+        <div className="page-container">
             <h1 className="page-title mt-8">boot</h1>
             <p className="mt-8 mb-8">In other words, this site was built using...</p>
             <ul className="list-disc pl-8">

@@ -26,8 +26,8 @@
     @apply font-serif text-2xl no-underline
   }
 
-  .ph {
-    @apply pl-[25%] pr-[25%]
+  .page-container {
+    @apply container mx-auto max-w-[777px] px-4
   }
 
   .navbar-link {
