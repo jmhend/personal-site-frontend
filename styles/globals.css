@@ -59,6 +59,11 @@
   color: rgb(114, 111, 108);
 }
 
+.post-view img {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .post-view hr {
   margin-top: 4rem;
   margin-bottom: 4rem;
