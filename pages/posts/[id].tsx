@@ -15,7 +15,7 @@ export const getStaticProps = async ( { params }: any) => {
   const queryParams: string = qs.stringify({
     populate: '*',
   });
-  const response = await axios.get(`http://127.0.0.1:1337/api/posts/${params.id}?${queryParams}`)
+  const response = await axios.get(`${process.env.DB_HOST}/api/posts/${params.id}?${queryParams}`)
   return {
     props: {
       postJson: response.data.data
@@ -24,7 +24,7 @@ export const getStaticProps = async ( { params }: any) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await axios.get("http://127.0.0.1:1337/api/posts")
+  const response = await axios.get(`${process.env.DB_HOST}/api/posts`)
   const paths = response.data.data.map((post: any) => {
       return {params: {id: post.id.toString() }}
   })

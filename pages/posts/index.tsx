@@ -23,7 +23,7 @@ export const getStaticProps = async () => {
     populate: '*',
     sort: ['id:desc']
   });
-  const response = await axios.get(`http://127.0.0.1:1337/api/posts?${params}`)
+  const response = await axios.get(`${process.env.DB_HOST}/api/posts?${params}`)
   return {
     props: {
       posts: response.data.data
