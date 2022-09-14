@@ -14,10 +14,10 @@ export const Boot: FunctionComponent = () => {
                 <li className="mt-2">
                     <a href="https://strapi.io/">Strapi</a>...
                     <p className="text-sm">
-                        ... kinda. I store each post on the <Link href="/posts"><a>posts page</a></Link> as an entry in Strapi on localhost. 
-                        Since this site is statically generated during `next export`, there&apos;s no need to host the Strapi 
-                        instance. I use it locally to generate posts, json, and static props. Only the site&apos;s static output is hosted.
-                        Mostly, it&apos;s fun a experience to play around with a headless CMS!
+                        ... kinda. I store each post on the <Link href="/posts"><a>posts page</a></Link> as an entry in Strapi on <Link href="https://railway.app/"><a>Railway.app</a></Link> . 
+                        Since this site is statically generated during `next export`, there&apos;s really no need to host the Strapi 
+                        instance, but I&apos;ve done it for completion.
+                        Mostly, it&apos;s fun a experience to play around with a headless CMS and Railway.
                     </p>
                 </li> 
                 <li className="mt-2">
@@ -28,6 +28,9 @@ export const Boot: FunctionComponent = () => {
                 </li>
                 <li className="mt-2">
                     <a href="https://vercel.com/">Vercel</a>
+                </li>  
+                <li className="mt-2">
+                    <a href="https://railway.app/">Railway</a>
                 </li>  
             </ul>
             <p className="mt-8 mb-8">
