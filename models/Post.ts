@@ -2,6 +2,7 @@ import { PostTag } from "./PostTag";
 
 export class Post {
     id: string;
+    slug: string;
     title: string;
     description: string;
     body: string;
@@ -13,6 +14,7 @@ export class Post {
 
     constructor(
         id: string,
+        slug: string,
         title: string,
         description: string,
         body: string,
@@ -22,6 +24,7 @@ export class Post {
         minutes: number,
         post_tags: PostTag[]) {
             this.id = id;
+            this.slug = slug;
             this.title = title;
             this.description = description;
             this.body = body;
@@ -38,6 +41,7 @@ export class Post {
     static fromJSON(json: any): Post {
         return new Post(
             json.id,
+            json.attributes.slug,
             json.attributes.title, 
             json.attributes.description, 
             json.attributes.body, 

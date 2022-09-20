@@ -10,7 +10,7 @@ export const PostPreview: FunctionComponent<PostPreviewProps> = ( { post } : Pos
     return (
         <aside>
             <div className="pt-8 pb-8">
-                <Link href={`/posts/${post.id}`}>
+                <Link href={`/posts/p/${post.slug}`}>
                     <a className="fat-link">{post.title}</a>
                 </Link>
                 <p className="text-[#726F6C] mt-2 ">{post.description}</p>
