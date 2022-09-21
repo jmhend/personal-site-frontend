@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { Post } from '../../../models/Post'
+import { Post } from '../../models/Post'
 import { InferGetStaticPropsType, GetStaticPaths } from 'next'
-import { PostView } from '../../../components/PostView'
+import { PostView } from '../../components/PostView'
 
 function PostPage( { postJson }: InferGetStaticPropsType<typeof getStaticProps>) {
   const post = Post.fromJSON(postJson)
