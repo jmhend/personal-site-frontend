@@ -20,7 +20,7 @@ export const getStaticProps = async ( { params }: any) => {
         },
       },
   });
-  // TODO actually write a new slug findOne() endpoint...
+  // TODO actually write a new slug findOne() endpoint!
   const response = await axios.get(`${process.env.DB_HOST}/api/posts?${queryParams}`)
   return {
     props: {
