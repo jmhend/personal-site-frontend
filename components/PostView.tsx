@@ -11,8 +11,7 @@ export type PostViewProps = {
 export const PostView: FunctionComponent<PostViewProps> = ( { post } : PostViewProps) => {
     const md = new MarkdownIt();
     const htmlBody = md.render(post.body);
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=&{}via=jessetweettweet`
-    
+    const { asPath } = useRouter();
     return (
         <>
             <div className="post-view page-container pt-8 pb-8">
@@ -22,7 +21,7 @@ export const PostView: FunctionComponent<PostViewProps> = ( { post } : PostViewP
             </div>
             <div className="page-container">
                 <div className="pt-4 pb-4">
-                    <Link href={getTwitterShareUrl(post)}>
+                    <Link href={getTwitterShareUrl(post, asPath)}>
                         <a>
                         <div className="flex flex-row" >
                             <img src="/twitter.svg" className="w-4 h-4 mr-1"/>
@@ -37,10 +36,9 @@ export const PostView: FunctionComponent<PostViewProps> = ( { post } : PostViewP
     );
 }
 
-function getTwitterShareUrl(post: Post): string  {
-    const { asPath } = useRouter();
+function getTwitterShareUrl(post: Post, path: string): string  {
     const qs = require('qs');
-    const url = `www.jmhend.me${asPath}`;
+    const url = `www.jmhend.me${path}`;
     const params: string = qs.stringify({
         text: post.title,
         via: 'jessetweettweet',
