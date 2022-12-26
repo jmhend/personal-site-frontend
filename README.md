@@ -1,1 +1,1 @@
-Front-end next.js source for jmhend.me
+Front-end next.js source for jmhend.me.
