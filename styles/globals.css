@@ -56,7 +56,9 @@
   line-height: 200%;
   font-style: italic;
   font-weight: 300;
+  padding: 0px 1rem;
   color: rgb(114, 111, 108);
+  border-left: 2px solid rgb(208, 202, 197);
 }
 
 .post-view img {
@@ -79,4 +81,18 @@
 
 .post-view ol li {
   margin-top: 1rem;
+}
+
+.post-view ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.post-view ul li {
+  margin-top: 4px;
+}
+
+.post-view h4 {
+  margin-top: 1rem;
+  font-weight: 700;
 }
